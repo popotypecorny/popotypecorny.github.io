@@ -1,0 +1,156 @@
+:root {  
+    --purple: rgb(68, 64, 145);
+    --violet: rgb(100, 75, 141);
+    --pink: rgb(143, 177, 244);
+}
+
+/* Animações */
+
+@keyframes background-pan{
+    from {
+        background-position: 0% center;
+    }
+
+    to {
+        background-position: -200% center;
+    }
+}
+
+.magic {
+    animation: background-pan 3s linear infinite;   
+    background: linear-gradient(
+      to right,
+      var(--purple),
+      var(--violet),
+      var(--pink),
+      var(--purple)
+    );
+    background-size: 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    white-space: nowrap;
+}
+
+/* Site */
+
+*{
+margin: 5px;
+box-sizing: border-box;
+}
+
+body{
+    height: 98vh;
+    background: rgb(35, 34, 39);
+    font-family: sans-serif;
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+header{
+    background: #1d1d1d;
+    padding: 2em 0 2em 0;
+    border: 0.002em solid rgba(255, 255, 255, 0.387);
+    border-radius: 5px;
+}
+
+/* Main */
+
+main{
+    background: #1d1d1d;
+    padding: 3em 0 3em 0;
+    flex:  5 150px;
+}
+
+.main{
+    display: flex;
+    flex: 1;
+}
+
+footer{
+    background: #1d1d1d;
+    padding: 1em 0 1em 0;
+}
+
+@media all and (max-width: 550px){
+    .main{
+    flex-direction: column;
+    }
+    main{
+        padding: 5em 0 5em 0;
+    }
+}
+
+/* Ladinho */
+
+.left{
+    background: #1d1d1d;
+    padding: 3em 0 3em 0;
+    flex: 1 1 100px;
+}
+
+.icon{
+    border-radius: 50%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 200px;
+}
+
+h5{
+    margin-top: 10px;
+}
+
+  .butão{
+    margin-top: 30px;
+    position: relative;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 50%;
+}
+
+/* style dos botõe */
+
+.home, .vr, .estudos, .outros{
+    margin: 20px;
+    align-items: center;
+    backdrop-filter: blur(3px);
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+    cursor: pointer;  
+    display: flex;
+    gap: 5px;
+    padding: 10px 10px;
+    text-decoration: none;
+    transition: background-color 600ms, border-color 600ms;
+    z-index: 10000;
+    flex-direction: column;
+}
+
+/* Pronomes */
+
+span:before{  
+    content: "vindo";
+}
+
+span:hover::before{
+    content: "vinde";
+}
+
+.popo{
+    bottom: 0;
+    right: 0;
+    position: fixed;
+    z-index: 3000;
+    border-radius: 20%;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    width: 200px;
+    opacity: 0.5;
+}
+
+.popo:hover{
+    opacity: 1.0;
+}
