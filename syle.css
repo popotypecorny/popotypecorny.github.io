@@ -2,8 +2,9 @@
     --purple: rgb(68, 64, 145);
     --violet: rgb(100, 75, 141);
     --pink: rgb(143, 177, 244);
+    --bg: rgb(37, 37, 37);
 }
-
+  
 /* Animações */
 
 @keyframes background-pan{
@@ -15,6 +16,8 @@
         background-position: -200% center;
     }
 }
+
+
 
 .magic {
     animation: background-pan 3s linear infinite;   
@@ -40,8 +43,10 @@ box-sizing: border-box;
 
 body{
     height: 98vh;
-    background: rgb(35, 34, 39);
-    font-family: sans-serif;
+    background-image: url(images/807eorielnka1.webp);
+    background-size:cover;  
+    /* background: rgb(35, 34, 39);*/
+    font-family: "Rubik", sans-serif;
     text-align: center;
     color: white;
     display: flex;
@@ -95,6 +100,11 @@ footer{
     margin-top: 20px;
     margin-bottom: 20px;
     width: 200px;
+    transition: .5s;
+}
+
+.icon:hover{
+    -webkit-border-radius: 0 0 0 0;
 }
 
 h5{
@@ -127,6 +137,24 @@ h5{
     transition: background-color 600ms, border-color 600ms;
     z-index: 10000;
     flex-direction: column;
+    
+}
+
+.home:hover, .vr:hover, .estudos:hover, .outros:hover{
+    animation: background-pan 7s linear infinite;   
+    background: linear-gradient(
+      to right,
+      var(--bg),
+      var(--bg),
+      var(--violet),
+      var(--pink),
+      var(--purple),
+      var(--bg)
+    );
+    background-size: 700%;
+    -webkit-background-clip: background-color;
+    white-space: nowrap;
+    
 }
 
 /* Pronomes */
@@ -154,3 +182,6 @@ span:hover::before{
 .popo:hover{
     opacity: 1.0;
 }
+
+
+/* basicamente agora é só fazer o js */
