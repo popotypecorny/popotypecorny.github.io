@@ -183,5 +183,14 @@ span:hover::before{
     opacity: 1.0;
 }
 
+.erro{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1em 0 3em 0;
+    max-width: 50%;
+    height: auto;
+    width: auto\9; /* ie8 */
+}
 
 /* basicamente agora é só fazer o js */
